@@ -1,4 +1,4 @@
-#CDX Catalogue schemas for smart cities 
+# CDX Catalogue schemas for smart cities 
 Desription: 
 The project contains schemas describing meta-information for various deployed 
 data sources (sensors/actuators, devices, virtual sensors etc.). The schemas
