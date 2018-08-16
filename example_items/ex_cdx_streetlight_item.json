@@ -1,7 +1,6 @@
 {
   "refCatalogueSchema": "cdx_base_staticThing.json",
   "id": "70b3d58ff0031f00",
-  "resourceType": "streetlight",
   "tags": [
     "onstreet",
     "Energy",
@@ -19,10 +18,6 @@
   "owner": {
     "name": "IISC",
     "website": "http://www.iisc.ac.in"
-  },
-  "provider": {
-    "name": "Robert Bosch Centre for Cyber Physical Systems, IISc",
-    "website": "http://rbccps.org"
   },
   "geoLocation": {
     "address": "80 ft Road, Bangalore, 560012"
@@ -250,21 +245,5 @@
          }
       },
       "additionalProperties": false
-  },
-  "serialization_from_device": {
-    "format": "protocol-buffers",
-    "schema_ref": {
-      "type": "proto 2",
-      "mainMessageName": "sensor_values",
-      "link": "https://raw.githubusercontent.com/rbccps-iisc/applications-streetlight/master/proto_stm/txmsg/sensed.proto"
-    }
-  },
-  "serialization_to_device": {
-    "format": "protocol-buffers",
-    "schema_ref": {
-      "type": "proto 2",
-      "mainMessageName": "targetConfigurations",
-      "link": "https://raw.githubusercontent.com/rbccps-iisc/applications-streetlight/master/proto_stm/rxmsg/actuated.proto"
-    }
   }
 }

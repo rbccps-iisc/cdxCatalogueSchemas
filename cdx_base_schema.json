@@ -1,7 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "describes": "Base schema of catalogue entries",
-  "version": "1.0.0",
   "type": "object",
   "properties": {
     "id": {
@@ -44,19 +43,17 @@
            "type": "boolean"
          },
          "properties": {
-            "type": "object",
             "patternProperties": {
-               "type": "object",
                "[a-zA-Z0-9]+$": {
                  "type": "object",
                  "describes": "Schema of a message from the information source",
-                 "required" : ["type", "direction", "sharing", "priority", "describes", "properties","$schema"],
+                 "required" : ["type", "direction", "sharing", "priority", "describes", "properties"],
                  "properties": {
                    "type": {
                      "type": "string",
                      "enum": ["object"]
                    },
-                   "$schema" : {
+                   "schema" : {
                    	  "type" : "string",
                    	  "format" : "uri-reference"
                    },
@@ -96,60 +93,6 @@
            }
         }
      }
-    },
-    "serialization_from_device": {
-      "describes": "Data serialization format used to send data from the device",
-      "type": "object",
-      "properties":{
-          "format": {
-            "type": "string"
-          },
-          "schema_ref": {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string"
-              },
-              "link": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "link"
-            ]
-          }
-      },
-      "required": [
-          "format",
-          "schema_ref"
-      ]
-    },
-    "serialization_to_device": {
-      "describes": "Data serialization format used to send data to the device",
-      "type": "object",
-      "properties":{
-          "format": {
-            "type": "string"
-          },
-          "schema_ref": {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string"
-              },
-              "link": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "link"
-            ]
-          }
-      },
-      "required": [
-          "format",
-          "schema_ref"
-      ]
     }
   },
   "additionalProperties": {
@@ -160,8 +103,6 @@
     "refCatalogueSchema",
     "refCatalogueSchemaRelease",
     "owner",
-    "provider",
-    "message_schemas",
     "tags"
   ]
 }

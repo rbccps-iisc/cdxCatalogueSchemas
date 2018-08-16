@@ -1,7 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "describes": "Schema of catalogue entries",
-  "version": "1.0.0",
   "type": "object",
   "allOf": [
    {"$ref": "cdx_base_schema.json#"}
