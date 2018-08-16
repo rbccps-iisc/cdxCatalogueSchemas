@@ -21,7 +21,8 @@ A skeleton item contains the minimum required number of fields for a given schem
 (mandatory fields). These files are provided to help a user create its own device item 
 using a given skeleton file as a start point.
 
-jsonschema_val.py: 
+jsonschema_val.py:
+
 Validator script. For example, to validate a given catalogue item:
   python jsonschema_val.py example_items/ex_cdx_streetlight_item.json
 
